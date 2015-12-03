@@ -1,0 +1,7 @@
+[package]
+name = "maxones"
+version = "0.1.0"
+authors = ["JJ Merelo <jjmerelo@gmail.com>"]
+
+[dependencies]
+rand = "0.3" 
