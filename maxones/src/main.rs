@@ -10,9 +10,18 @@ fn main() {
     while len <= last {
         for i in 0..how_many {
             let this_vec: Vec<bool> = rng.gen_iter::<bool>().take(len).collect();
-            println!("{:?}",this_vec);
+            let maxones = this_vec.iter().fold(0, |acc, &item| acc + is_one(item));
+            println!("{}", maxones)
         }
         println!("{}",len);
         len = len*2;
+    }
+}
+
+fn is_one( bit: bool ) -> i16 {
+    if  bit == true  {
+        1
+    } else {
+        0
     }
 }
